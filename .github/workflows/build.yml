@@ -43,8 +43,8 @@ jobs:
         run: |
            #run commands to build and push docker images
            docker build --build-arg TMDB_V3_API_KEY=a3aa1212caeb826ccd50e4ebd19aecf3 -t netflix .
-           docker tag netflix joebaho2/Netflix-TMBD:latest
+           docker tag netflix joebaho2/netflix-tmbd:latest
            docker login -u ${{ secrets.DOCKERHUB_USERNAME }}  - p ${{ secrets.DOCKERHUB_TOKEN }}
-           docker push joebaho2/Netflix_TMBD:latest
+           docker push joebaho2/netflix-tmbd:latest
         env: 
             DOCKER_CLI_ACI: 1     
